@@ -21,7 +21,7 @@ const app = express();
 app.use(helmet()); // for setting secure HTTP headers
 app.use(morgan("dev")); // logging
 app.use(cors({
-  origin:["http://localhost:3000", "https://note-mark-nu.vercel.app/"],
+  origin:["http://localhost:3000", "https://note-mark-nu.vercel.app"],
   credentials: true
 }));
 app.use(express.json()); // JSON body parser
