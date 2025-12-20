@@ -18,9 +18,10 @@ export default function Login() {
 
     try {
       const res = await api.post("/auth/login", { email, password });
-      const { user, token } = res.data;
-      login(user, token);
-      navigate("/notes");
+      const { user } = res.data;
+login(user);
+navigate("/dashboard"); // ya dashboard
+
     } catch (err) {
       const msg = err.response?.data?.message || "Login failed. Please try again.";
       setError(msg);

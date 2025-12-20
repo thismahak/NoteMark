@@ -13,7 +13,7 @@ export const AuthProvider = ({ children }) => {
     const checkAuth = async () => {
       try {
         const res = await api.get("/auth/me"); // Checks for valid cookie/session
-        setUser(res.data);
+           setUser(res.data.user || res.data);
       } catch (err) {
         console.error("Auth check failed:", err.message);
         setUser(null);
