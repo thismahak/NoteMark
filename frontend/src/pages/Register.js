@@ -7,6 +7,7 @@ import { MdAppRegistration } from "react-icons/md";
 export default function Register() {
   const { login } = useAuth();
   const navigate = useNavigate();
+  const [name, setName] = useState("");
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -17,7 +18,7 @@ export default function Register() {
     setError("");
 
     try {
-      const res = await api.post("/auth/register", { email, password });
+      const res = await api.post("/auth/register", { name,email, password });
       const { user, token } = res.data;
       login(user, token);
       navigate("/dashboard");
@@ -46,6 +47,14 @@ export default function Register() {
             {error}
           </p>
         )}
+        <input
+  type="text"
+  placeholder="Name"
+  value={name}
+  onChange={(e) => setName(e.target.value)}
+  required
+  className="w-full px-4 py-2 border border-gray-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-800 dark:text-slate-100 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-teal-300"
+/>
 
         <input
           type="email"
