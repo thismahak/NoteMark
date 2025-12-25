@@ -217,11 +217,7 @@ REACT_APP_API_BASE_URL=https://notemark-backend.onrender.com/api
 
 ---
 
-## 🙋 Contact
-
-Made with ❤️ by **Mahak Gupta**
-🔗 LinkedIn • GitHub
-
+## 🙋 Contact Made with ❤️ by \[**Mahak Gupta**] 🔗 [LinkedIn](https://www.linkedin.com/in/mahak-gupta-158a712a0/) • [GitHub](https://github.com/thismahak)
 ---
 
 ## 📌 License
